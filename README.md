@@ -5,6 +5,9 @@
 * 1. esp-box:0.3.0
 * 2. esp-sr:dev2.0
 
+## HMI Eenvironment：
+* 1. GUI-Guider-1.6.1-GA
+
 ## 编译环境(Compilation Eenvironment)：
 * 1. https://github.com/espressif/esp-idf/releases/tag/v4.4.6
 * 2. 或者https://dl.espressif.com/github_assets/espressif/esp-idf/releases/download/v4.4.6/esp-idf-v4.4.6.zip
