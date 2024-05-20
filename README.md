@@ -1,6 +1,15 @@
 
 ## 更新说明(Update Records)：
 
+### v3.0.0
+* 1. esp-box:master,https://github.com/espressif/esp-box
+* 2. esp-sr:1.6.1,https://github.com/espressif/esp-sr
+* 3. esp-skainet:master,https://github.com/espressif/esp-skainet
+
+### v2.0.0
+* 1. esp-box:0.3.0
+* 2. esp-sr:dev2.0
+
 ### v1.0.0
 * 1. esp-box:0.3.0
 * 2. esp-sr:dev2.0

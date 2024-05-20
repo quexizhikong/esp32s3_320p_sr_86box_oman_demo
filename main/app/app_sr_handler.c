@@ -99,13 +99,14 @@ void sr_handler_task(void *pvParam)
     FILE *fp;
     //const sys_param_t *param = settings_get_parameter();
     const char *files[2][3] = {
-        {"/spiffs/echo_en_wake.wav", "/spiffs/echo_en_ok.wav", "/spiffs/echo_en_end.wav"},
-        {"/spiffs/echo_cn_wake.wav", "/spiffs/echo_cn_ok.wav", "/spiffs/echo_cn_end.wav"},
+        {"/spiffs/echo_en_wake.wav", "/spiffs/echo_en_ok.wav", "/spiffs/echo_en_end.wav"},//english
+        {"/spiffs/echo_cn_wake.wav", "/spiffs/echo_cn_ok.wav", "/spiffs/echo_cn_end.wav"},//chinese
+		//... Add other language
     };
     char audio_file[48] = {0};
     for (size_t i = 0; i < AUDIO_MAX; i++)
     {
-        strncpy(audio_file, files[1][i], sizeof(audio_file));//english
+        strncpy(audio_file, files[0][i], sizeof(audio_file));//english
 
         fp = fopen(audio_file, "rb");
         ESP_GOTO_ON_FALSE(NULL != fp, ESP_ERR_NOT_FOUND, err, TAG, "Open file %s failed", audio_file);
@@ -152,7 +153,7 @@ void sr_handler_task(void *pvParam)
             continue;
         }
 
-        if (AFE_FETCH_WWE_DETECTED == result.fetch_mode)
+        if (WAKENET_DETECTED == result.wakenet_mode)
         {
 //            sr_anim_start();
 //            last_player_state = app_player_get_state();

@@ -31,19 +31,20 @@ extern "C" {
 #define SR_CMD_PHONEME_LEN_MAX 64
 
 
+////typedef enum {
+////    SR_DETECTING,
+////    SR_DETECTED,
+////    SR_TIMEOUT,
+////} esp_mn_state_t;
 //typedef enum {
-//    SR_DETECTING,
-//    SR_DETECTED,
-//    SR_TIMEOUT,
+//	ESP_MN_STATE_DETECTING = 0,     // detecting
+//	ESP_MN_STATE_DETECTED = 1,      // detected
+//    ESP_MN_STATE_TIMEOUT = 2,       // time out
 //} esp_mn_state_t;
-typedef enum {
-	ESP_MN_STATE_DETECTING = 0,     // detecting
-	ESP_MN_STATE_DETECTED = 1,      // detected
-    ESP_MN_STATE_TIMEOUT = 2,       // time out
-} esp_mn_state_t;
 
 typedef struct {
-    afe_fetch_mode_t fetch_mode;
+  //afe_fetch_mode_t fetch_mode;
+    wakenet_state_t wakenet_mode;
     esp_mn_state_t state;
     int command_id;
 } sr_result_t;

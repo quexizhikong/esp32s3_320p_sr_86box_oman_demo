@@ -109,7 +109,7 @@ void app_main(void)
 
 //	//eth_init_sta();
 
-////tes mp3
+////test mp3
 //    ESP_ERROR_CHECK(app_player_start("/spiffs/mp3"));
 
 //esr esp-asr
