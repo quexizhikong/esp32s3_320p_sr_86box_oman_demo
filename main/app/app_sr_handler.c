@@ -99,8 +99,8 @@ void sr_handler_task(void *pvParam)
     FILE *fp;
     //const sys_param_t *param = settings_get_parameter();
     const char *files[2][3] = {
-        {"/spiffs/echo_en_wake.wav", "/spiffs/echo_en_ok.wav", "/spiffs/echo_en_end.wav"},//english
-        {"/spiffs/echo_cn_wake.wav", "/spiffs/echo_cn_ok.wav", "/spiffs/echo_cn_end.wav"},//chinese
+		{"/spiffs/echo_en_wake.wav", "/spiffs/echo_en_ok.wav", "/spiffs/echo_en_end.wav"},//english
+		{"/spiffs/echo_cn_wake.wav", "/spiffs/echo_cn_ok.wav", "/spiffs/echo_cn_end.wav"},//chinese
 		//... Add other language
     };
     char audio_file[48] = {0};
@@ -153,7 +153,7 @@ void sr_handler_task(void *pvParam)
             continue;
         }
 
-        if (WAKENET_DETECTED == result.wakenet_mode)
+        if (AFE_FETCH_WWE_DETECTED == result.fetch_mode)
         {
 //            sr_anim_start();
 //            last_player_state = app_player_get_state();
